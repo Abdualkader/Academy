@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33EE6347-709B-4D8C-BAF9-C91E6AC48556}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Academy</RootNamespace>
+    <AssemblyName>Academy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Class_Division.cs" />
+    <Compile Include="BL\Class_Courses.cs" />
+    <Compile Include="BL\Class_Open_Courses.cs" />
+    <Compile Include="BL\Class_Students.cs" />
+    <Compile Include="BL\Class_Students_Study.cs" />
+    <Compile Include="DataAccess\C_Data_Access.cs" />
+    <Compile Include="Pages\AddStoCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddStoCourse.Designer.cs">
+      <DependentUpon>AddStoCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Courses.Designer.cs">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Divison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Divison.Designer.cs">
+      <DependentUpon>Divison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\openCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\openCourses.Designer.cs">
+      <DependentUpon>openCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentsRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StudentsRegister.Designer.cs">
+      <DependentUpon>StudentsRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pages\AddStoCourse.resx">
+      <DependentUpon>AddStoCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Courses.resx">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Divison.resx">
+      <DependentUpon>Divison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\openCourses.resx">
+      <DependentUpon>openCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentsRegister.resx">
+      <DependentUpon>StudentsRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_university_100px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_books_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_university_100px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_books_100px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_100px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_center_100px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_classroom_100px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_read_online_100px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hs-school-logo-data_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiny-students-learning-online-lesson-via-laptop-flat-illustration-cartoon-people-listening-computer-webinar-video-college-lecture_74855-14179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39bd0ae20c1ddfd6a45d64a6022f-1587825.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-industry-company-skill-redvector-com-service-center-vector-5ad7b9661b8cf1.7517546115240871421129.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-industry-company-skill-redvector-com-service-center-vector-5ad7b9661b8cf1.75175461152408714211291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration-generic-woman-presenting__1200x630.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration-generic-student-teacher-presentation__1200x630-landscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1134004863-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-using-e-learning-platform-video-laptop-graduation-cap_335657-3285.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-with-laptops-sitting-around-lector-interactive-board-illustration_335657-261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_macos_maximize_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Plus_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Plus_60px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_books_100px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_university_100px_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Plus_60px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_60px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Close_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1134004863-612x6121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration-generic-student-teacher-presentation__1200x630-landscape %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-using-e-learning-platform-video-laptop-graduation-cap_335657-32851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-with-laptops-sitting-around-lector-interactive-board-illustration_335657-2611.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration-generic-woman-presenting__1200x6301.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
